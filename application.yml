@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: collabsphere
+  datasource:
+    url: jdbc:mysql://localhost:3306/collabsphere_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: yourpassword123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret: superSecretKeyForCollabSphereJWT2026AtLeast512BitsMakeItLongerInProduction
+  expiration: 86400000
+
+logging:
+  level:
+    com.collabsphere: DEBUG
